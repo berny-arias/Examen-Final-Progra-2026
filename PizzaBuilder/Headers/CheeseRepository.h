@@ -1,15 +1,7 @@
 #pragma once
+#include "IngredientRepository.h"
 
-#include <string>
-#include <vector>
-
-class CheeseRepository {
+class CheeseRepository : public IngredientRepository {
 public:
     CheeseRepository();
-
-    const std::vector<std::string>& Names() const;
-    int GetAvailableQuantity(const std::string& name) const;
-
-private:
-    std::vector<std::string> names_;
 };
